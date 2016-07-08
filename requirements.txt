@@ -1,0 +1,10 @@
+jupyter
+notebook
+pandas
+numpy
+matplotlib
+launchpadlib
+pygerrit
+simplejson
+keyrings.alt
+lazr.restfulclient
