@@ -4,15 +4,10 @@ MAINTAINER Dmitry Pyzhov <dpyzhov@mirantis.com>
 
 RUN apt-get update && apt-get install -yq --no-install-recommends \
     python-virtualenv python-dev gcc g++ libffi-dev libssl-dev \
-    libfreetype6-dev libpng12-dev pkg-config python-pip
+    libfreetype6-dev libpng12-dev pkg-config python-pip \
+    python-setuptools cython
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update && apt-get install -yq --no-install-recommends \
-    python-setuptools
-
-RUN apt-get update && apt-get install -yq --no-install-recommends \
-    cython
 
 COPY requirements.txt /tmp/
 
